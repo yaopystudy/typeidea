@@ -16,5 +16,8 @@ class Comment(models.Model):
     #配置model
     class Meta:
         verbose_name= verbose_name_plural= "评论"
+        #也可在此配置组合索引、联合索引、排序
+
+
 
 
