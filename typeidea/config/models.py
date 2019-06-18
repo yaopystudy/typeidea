@@ -7,6 +7,7 @@ from django.db import models
 
 class Link(models.Model):
 
+
     STATUS_ITEMS= (
         (1,"正常"),
         (2,"删除"),
@@ -20,6 +21,8 @@ class Link(models.Model):
 
     class Meta:
         verbose_name= verbose_name_plural = "友链"
+
+
 class SiderBar(models.Model):
     STATUS_ITEMS= (
         (1,'展示'),

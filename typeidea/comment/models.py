@@ -2,8 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from  typeidea.blog.models import  Post
-# Create your models here.
+from  blog.models import  Post
 
 
 class Comment(models.Model):
