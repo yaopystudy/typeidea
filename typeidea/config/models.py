@@ -19,6 +19,12 @@ class Link(models.Model):
     owner= models.ForeignKey(User,verbose_name="作者")
     created_time= models.DateTimeField(auto_now_add=True,verbose_name="创建时间")
 
+    def  __str__(self):
+        return  self.title
+    def  __unicode__(self):
+        return  self.title
+
+
     class Meta:
         verbose_name= verbose_name_plural = "友链"
 
@@ -39,7 +45,14 @@ class SiderBar(models.Model):
     display_type= models.PositiveIntegerField(default=1,choices=SIDE_TYPE,verbose_name="展示类型")
     content= models.CharField(max_length=500,blank=True,verbose_name="内容",help_text="如果设置的类型不是HTML类型，可为空")
     owner= models.ForeignKey(User,verbose_name="作者")
+    status = models.PositiveIntegerField(default=1,choices=STATUS_ITEMS,verbose_name='状态')
     created_time= models.DateTimeField(auto_now_add=True,verbose_name="创建时间")
+
+    def __str__(self):
+        return  self.title
+    def  __unicode__(self):
+        return  self.title
+
 
     class Meta:
         verbose_name= verbose_name_plural="侧边栏"
